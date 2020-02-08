@@ -32,6 +32,9 @@ egeoffrey-cli build egeoffrey-database-mongodb <amd64|arm>
 ```
 To function properly, when running in a Docker container, the following additional configuration settings has to be added to e.g. your docker-compose.yml file (when installing through egeoffrey-cli, this is not needed since done automatically upon installation):
 ```
+environment:
+- MONGO_INITDB_ROOT_USERNAME=root
+- MONGO_INITDB_ROOT_PASSWORD=password
 ports:
 - 27017:27017
 volumes:
@@ -54,4 +57,4 @@ database
 
 ## Version
 
-The version of this egeoffrey-database-mongodb is 1.0-1 on the master branch.
+The version of this egeoffrey-database-mongodb is 1.0-2 on the master branch.

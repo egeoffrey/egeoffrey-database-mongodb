@@ -1,6 +1,9 @@
 arch: amd64
 branch: master
 container_config:
+  environment:
+  - MONGO_INITDB_ROOT_USERNAME=root
+  - MONGO_INITDB_ROOT_PASSWORD=password
   ports:
   - 27017:27017
   volumes:
@@ -12,6 +15,6 @@ icon: database
 manifest_schema: 2
 modules: []
 package: egeoffrey-database-mongodb
-revision: 1
+revision: 2
 tags: database
 version: 1.0
