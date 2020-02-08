@@ -1,16 +1,16 @@
-# egeoffrey-database
+# egeoffrey-database-mongodb
 
 This is an eGeoffrey database package.
 
 ## Description
 
-Runs eGeoffrey database for storing sensors' information.
+Runs eGeoffrey database (MongoDB) for storing sensors' information.
 
 ## Install
 
 To install this package, run the following command from within your eGeoffrey installation directory:
 ```
-egeoffrey-cli install egeoffrey-database
+egeoffrey-cli install egeoffrey-database-mongodb
 ```
 After the installation, remember to run also `egeoffrey-cli start` to ensure the Docker image of the package is effectively downloaded and started.
 To validate the installation, go and visit the *'eGeoffrey Admin'* / *'Packages'* page of your eGeoffrey instance. All the modules, default configuration files and out-of-the-box contents if any will be automatically deployed and made available.
@@ -26,14 +26,14 @@ If you are a user willing to contribute to somebody's else package, submit your 
 
 ## Build
 
-Building is required only if you are the author of the package. To build a Docker image and automatically push it to [Docker Hub](https://hub.docker.com/r/egeoffrey/egeoffrey-database), run the following command from within this package's directory:
+Building is required only if you are the author of the package. To build a Docker image and automatically push it to [Docker Hub](https://hub.docker.com/r/egeoffrey/egeoffrey-database-mongodb), run the following command from within this package's directory:
 ```
-egeoffrey-cli build egeoffrey-database <amd64|arm>
+egeoffrey-cli build egeoffrey-database-mongodb <amd64|arm>
 ```
 To function properly, when running in a Docker container, the following additional configuration settings has to be added to e.g. your docker-compose.yml file (when installing through egeoffrey-cli, this is not needed since done automatically upon installation):
 ```
 ports:
-- 6379:6379
+- 27017:27017
 volumes:
 - ./data/database/data:/database/data
 ```
@@ -42,7 +42,7 @@ volumes:
 
 To uninstall this package, run the following command from within your eGeoffrey installation directory:
 ```
-egeoffrey-cli uninstall egeoffrey-database
+egeoffrey-cli uninstall egeoffrey-database-mongodb
 ```
 Remember to run also `egeoffrey-cli start` to ensure the changes are correctly applied.
 ## Tags
@@ -54,4 +54,4 @@ database
 
 ## Version
 
-The version of this egeoffrey-database is 1.0-13 on the master branch.
+The version of this egeoffrey-database-mongodb is 1.0-1 on the master branch.

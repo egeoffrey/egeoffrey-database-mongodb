@@ -1,3 +1,4 @@
+arch: amd64
 branch: master
 container_config:
   ports:
@@ -11,7 +12,6 @@ icon: database
 manifest_schema: 2
 modules: []
 package: egeoffrey-database-mongodb
-revision: 0
+revision: 1
 tags: database
 version: 1.0
-arch: amd64
