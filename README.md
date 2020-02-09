@@ -38,7 +38,7 @@ environment:
 ports:
 - 27017:27017
 volumes:
-- ./data/database/data:/database/data
+- ./data/database-mongodb/data:/data/db
 ```
 
 ## Uninstall
@@ -57,4 +57,4 @@ database
 
 ## Version
 
-The version of this egeoffrey-database-mongodb is 1.0-2 on the master branch.
+The version of this egeoffrey-database-mongodb is 1.0-3 on the master branch.
